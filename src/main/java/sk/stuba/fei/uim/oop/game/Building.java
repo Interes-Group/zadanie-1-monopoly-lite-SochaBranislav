@@ -1,5 +1,7 @@
 package sk.stuba.fei.uim.oop.game;
 
+import sk.stuba.fei.uim.oop.KeyboardInput;
+
 public class Building extends Board {
 
     Building[] bulding=new Building[16];
@@ -10,6 +12,9 @@ public class Building extends Board {
 
     public void buy_building(Players players){
 
+        System.out.printf("chces kupit tuto budovu ( %d ) ? A/N ?  ", getPrice());
+        KeyboardInput.readChar();
+
         if(players.get_money()>=this.getPrice()){
 
             players.buy_building(this.getPrice());
@@ -17,15 +22,19 @@ public class Building extends Board {
             free=false;
             who_own=players;
             players.which_buldings_own=this.bulding;
+            System.out.println();
         }
 
         else{
             System.out.println("nemas dostatok penazi je mi to luto");
+            System.out.println();
         }
 
     }
 
     public void pay_another_player(Players players){
+
+        System.out.printf(" !!! tuto budovu vlastni hrac %s \n",who_own.get_name());
 
         if(players.get_money()>=this.getPrice_of_rent()){
 

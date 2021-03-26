@@ -1,11 +1,14 @@
 package sk.stuba.fei.uim.oop.game;
 
-public class Win extends Players{
+import java.util.ArrayList;
 
-    public void who_wins(Players[] players,int end){
-        for(int i=0;i<end;i++){
-            if(players[i].alive){
-                System.out.printf("VYHRAL SI %s ",players[i].get_name());
+public class Win {
+
+    public void who_wins(ArrayList<Players> players){
+        for(Players i : players) {
+            if (i.alive) {
+                System.out.printf("VYHRAL SI %s ", i.get_name());
+
             }
         }
     }

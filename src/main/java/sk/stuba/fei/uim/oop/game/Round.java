@@ -6,8 +6,9 @@ public class Round {
 
     final private int number=6;
 
-    public int rand_toss(){
-        Random rand= new Random();
+    Random rand= new Random();
+    public int rand_toss(Players players){
+        System.out.printf(" %s Hodil si cislo %d si na -> ",players.get_name(),rand.nextInt(number)+1);
         return  rand.nextInt(number)+1;
     }
 }
