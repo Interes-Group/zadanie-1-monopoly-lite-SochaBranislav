@@ -1,5 +1,6 @@
-package sk.stuba.fei.uim.oop.game;
+package sk.stuba.fei.uim.oop.game.inicialization;
 import sk.stuba.fei.uim.oop.KeyboardInput;
+import sk.stuba.fei.uim.oop.game.Players;
 
 import java.util.ArrayList;
 import java.util.Iterator;

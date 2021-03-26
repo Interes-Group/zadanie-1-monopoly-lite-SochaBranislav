@@ -1,8 +1,12 @@
-package sk.stuba.fei.uim.oop.game;
+package sk.stuba.fei.uim.oop.game.cards;
 
 
 
 import sk.stuba.fei.uim.oop.KeyboardInput;
+import sk.stuba.fei.uim.oop.game.Players;
+import sk.stuba.fei.uim.oop.game.Round;
+import sk.stuba.fei.uim.oop.game.Win;
+import sk.stuba.fei.uim.oop.game.inicialization.Initialization_players;
 
 import java.util.ArrayList;
 
@@ -16,7 +20,7 @@ public class Play  {
 
     Win win = new Win();
 
-    public void getInitialization_game() {
+     public void getInitialization_game() {
 
         ArrayList<Players> players = new ArrayList<>();
 

@@ -1,5 +1,6 @@
-package sk.stuba.fei.uim.oop.game;
+package sk.stuba.fei.uim.oop.game.cards;
 
+import sk.stuba.fei.uim.oop.game.Players;
 import sk.stuba.fei.uim.oop.KeyboardInput;
 
 public class Building extends Board {

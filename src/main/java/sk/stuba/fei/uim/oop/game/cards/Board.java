@@ -1,6 +1,8 @@
-package sk.stuba.fei.uim.oop.game;
+package sk.stuba.fei.uim.oop.game.cards;
+import sk.stuba.fei.uim.oop.game.Players;
+import sk.stuba.fei.uim.oop.game.inicialization.*;
 
-abstract class Board {
+public abstract class Board {
 
     protected String name;
 
@@ -37,4 +39,5 @@ abstract class Board {
     public void is_free(Players players){
 
     }
+
 }

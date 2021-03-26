@@ -1,10 +1,12 @@
-package sk.stuba.fei.uim.oop.game;
+package sk.stuba.fei.uim.oop.game.cards;
 
 
+import sk.stuba.fei.uim.oop.game.Players;
+import sk.stuba.fei.uim.oop.game.cards.Board;
 
-public class Chance extends Board  {
+public class Chance extends Board {
 
-    public void pay_card(Players players,int how_much) {
+    public void pay_card(Players players, int how_much) {
         players.player_pay(how_much);
         System.out.printf("Za prenajom platis %d tvoj zostatok je %d \n",how_much,players.get_money());
 

@@ -1,8 +1,8 @@
 package sk.stuba.fei.uim.oop.game;
 
 import sk.stuba.fei.uim.oop.KeyboardInput;
-
-import java.util.ArrayList;
+import sk.stuba.fei.uim.oop.game.cards.*;
+import sk.stuba.fei.uim.oop.game.cards.Building;
 
 public class  Players {
     public int id=0;
@@ -82,8 +82,8 @@ public class  Players {
             return true;
         }
     }
-    public void lose(Players players,Board[] board){
-        for(int i=0;i<board.length;i++) {
+    public void lose(Players players, Board[] board){
+        for( int i=0;i<board.length;i++) {
             if (board[i] instanceof Building) {
                 if (players.equals(((Building) board[i]).who_own)) {
                     ((Building) board[i]).free = true;

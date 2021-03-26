@@ -1,6 +1,9 @@
-package sk.stuba.fei.uim.oop.game;
+package sk.stuba.fei.uim.oop.game.cards;
 
-public class Tax extends Board{
+import sk.stuba.fei.uim.oop.game.Players;
+import sk.stuba.fei.uim.oop.game.cards.Board;
+
+public class Tax extends Board {
 
     public void pay_tax(Players players){
         System.out.print("TAX ->");
