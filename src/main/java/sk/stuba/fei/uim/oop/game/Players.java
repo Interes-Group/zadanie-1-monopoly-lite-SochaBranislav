@@ -59,8 +59,12 @@ public class  Players {
         money=money+200;
         System.out.printf(" tvoj zostatok je %d \n",get_money());
     }
+    public void jail(){
+        System.out.println(" POLICIA (chod do väzenia) ");
+        setJail(3);
+    }
 
-    public void setJail(int jail) {setJail(3);
+    public void setJail(int jail) {
         this.jail = jail;
     }
 
@@ -71,8 +75,8 @@ public class  Players {
 
     public boolean how_long_stay_in_prison(Players players){
         if (players.getJail() > 0) {
+            System.out.println(" hrac: " + players.get_name() + " je vo väzeni: " + players.getJail() + " kola");
             players.setJail(players.getJail() - 1);
-            System.out.println("hrac: " + players.get_name() + " je vo väzeni: " + players.getJail() + " kola");
             return false;
         } else {
             return true;

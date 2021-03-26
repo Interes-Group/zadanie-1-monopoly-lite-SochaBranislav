@@ -12,22 +12,21 @@ public class Building extends Board {
 
     public void buy_building(Players players){
 
-        System.out.printf("chces kupit tuto budovu ( %d ) ? A/N ?  ", getPrice());
-        KeyboardInput.readChar();
+        System.out.printf(" chces kupit tuto budovu ( %d ) ? A/N ?  ", getPrice());
+        char token=KeyboardInput.readChar();
+        if(token=='a' || token=='A' || token=='y' || token=='Y') {
+            if (players.get_money() >= this.getPrice()) {
 
-        if(players.get_money()>=this.getPrice()){
-
-            players.buy_building(this.getPrice());
-            System.out.print("kupil si tuto budovu gratulujem");
-            free=false;
-            who_own=players;
-            players.which_buldings_own=this.bulding;
-            System.out.println();
-        }
-
-        else{
-            System.out.println("nemas dostatok penazi je mi to luto");
-            System.out.println();
+                players.buy_building(this.getPrice());
+                System.out.print(" kupil si tuto budovu gratulujem");
+                free = false;
+                who_own = players;
+                players.which_buldings_own = this.bulding;
+                System.out.println();
+            } else {
+                System.out.println(" nemas dostatok penazi je mi to luto");
+                System.out.println();
+            }
         }
 
     }
@@ -40,12 +39,31 @@ public class Building extends Board {
 
             players.player_pay(this.getPrice_of_rent());
             who_own.player_earn(this.getPrice_of_rent());
-            System.out.printf("tvoj zostatok je: %d \n",players.get_money());
+            System.out.printf(" tvoj zostatok je: %d \n",players.get_money());
         }
 
         else{
-            System.out.println("PREHRAL SI ");
+            System.out.println(" PREHRAL SI ");
             players.alive=false;
+        }
+    }
+    public void is_free(Players players){
+        System.out.printf(" %s ",getName());
+        System.out.printf(" mas %d € ", players.get_money());
+        if (free) {
+
+            buy_building(players);
+
+        }
+        else if (players.equals(who_own)) {
+
+            System.out.println(" TVOJA KARTA ");
+            System.out.println();
+
+        }
+        else {
+
+            pay_another_player(players);
         }
     }
 

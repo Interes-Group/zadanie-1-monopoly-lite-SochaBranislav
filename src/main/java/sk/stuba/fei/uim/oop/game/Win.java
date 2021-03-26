@@ -12,4 +12,19 @@ public class Win {
             }
         }
     }
+    public int end_game(ArrayList<Players> players,int end){
+        int number=players.size();
+        System.out.println("kolko krat ?");
+        for(Players i:players){
+            if(i.id==end){
+                i.id=100;
+            }
+            if(i.id==100){
+                number--;
+            }
+            end++;
+        }
+        System.out.println(number);
+        return number;
+    }
 }

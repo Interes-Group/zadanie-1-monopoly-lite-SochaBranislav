@@ -33,6 +33,8 @@ abstract class Board {
 
     }
     public void pay_for_freedom(Players players){
+    }
+    public void is_free(Players players){
 
     }
 }
